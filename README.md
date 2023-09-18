@@ -30,6 +30,22 @@ INPUT_DEVICE_NAME = None # Azure format
 OUTPUT_DEVICE_NAME = None # pygame format
 ```
 
+There are some scripts in `scripts/` to list the available audio devices for Azure SDK and pygame:
+
+Example 1: on macOS, list the available audio devices:
+
+```bash
+cd scripts/macos_list_audio_devices
+make run
+```
+
+Example 2: list the available audio devices using pygame:
+
+```bash
+cd scripts/pygame_list_audio_devices
+make run
+```
+
 ### API Keys
 
 Set the following environment variables in a `.env` file, refer to `.env.example` for an example:
