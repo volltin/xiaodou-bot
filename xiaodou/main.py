@@ -20,10 +20,8 @@ dotenv.load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
 # input and output device names, if None, use default device
-# INPUT_DEVICE_NAME = "BlackHole2ch_UID" # Azure format
-# OUTPUT_DEVICE_NAME = "BlackHole 16ch" # pygame format
-INPUT_DEVICE_NAME = None
-OUTPUT_DEVICE_NAME = None
+INPUT_DEVICE_NAME = None  # Azure format
+OUTPUT_DEVICE_NAME = None  # pygame format
 
 # Set up OpenAI API credentials
 openai.api_type = "azure"
