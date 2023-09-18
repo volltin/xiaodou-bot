@@ -98,8 +98,8 @@ To contribute to the development of Xiaodou, follow these steps:
 1. Install pre-commit hooks and development dependencies:
 
    ```bash
-   pre-commit install
    poetry install
+   pre-commit install
    ```
 
 ## License
