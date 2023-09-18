@@ -12,10 +12,10 @@ Install the required packages using one of the following methods:
   pip install -r requirements.txt
   ```
 
-- With `poetry`:
+- With `poetry` (recommended):
 
   ```bash
-  poetry install
+  poetry install --without dev
   ```
 
 ## Configuration
@@ -67,3 +67,18 @@ Once activated, you can begin conversing with the chatbot. The interaction flow 
 7. The synthesized voice is played back to the user.
 8. The process repeats from step 1.
 ```
+
+## Development
+
+To contribute to the development of Xiaodou, follow these steps:
+
+1. Install pre-commit hooks and development dependencies:
+
+   ```bash
+   pre-commit install
+   poetry install
+   ```
+
+## License
+
+For more information on the license, please refer to the [LICENSE](LICENSE) file.
