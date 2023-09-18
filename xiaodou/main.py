@@ -179,7 +179,7 @@ def generate_text(messages):
         engine=engine_name,
         messages=messages,
         temperature=0.7,
-        max_tokens=200,
+        max_tokens=75,
     )
     return response["choices"][0]["message"]["content"]
 
