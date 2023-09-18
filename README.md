@@ -74,14 +74,21 @@ python xiaodou/main.py
 Once activated, you can begin conversing with the chatbot. The interaction flow is as follows:
 
 ```mermaid
-graph TD
-    A[Wait for keyword "小豆"] --> B[Play notification sound and receive voice input]
-    B --> C[Stop recording after user pause and play another notification sound]
-    C --> D[Recognize user's voice using Azure Speech Service]
-    D --> E[Send prompt to OpenAI API and receive response]
-    E --> F[Synthesize response using Azure Speech Service]
-    F --> G[Play synthesized voice to user]
-    G --> A
+sequenceDiagram
+    participant User
+    participant Bot
+    User->>Bot: Say the keyword
+    Bot->>User: Play notification sound
+    User->>Bot: Voice input (e.g. "Can you tell me a joke")
+    Bot->>Bot: Stop recording after user pause
+    Bot->>User: Play another notification sound
+    Bot->>Bot: Recognize voice with Azure Speech Service
+    Bot->>Bot: Send prompt to OpenAI API
+    Bot->>Bot: Receive response
+    Bot->>Bot: Synthesize response using Azure Speech Service
+    Bot->>User: Play synthesized voice (e.g. "Sure, here's a joke, ...")
+    User->>Bot: Repeat (starts with keyword)
+
 ```
 
 ## Development
