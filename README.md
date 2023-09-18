@@ -73,15 +73,15 @@ python xiaodou/main.py
 
 Once activated, you can begin conversing with the chatbot. The interaction flow is as follows:
 
-```
-1. The chatbot awaits the keyword "小豆".
-2. Upon hearing the keyword, the chatbot plays a sound to notify the user and indicates readiness for voice input.
-3. The chatbot stops recording when the user pauses for a period and plays another sound as a notification.
-4. The user's voice is recognized using Azure Speech Service.
-5. The prompt, including the recognized text, is sent to the OpenAI API and a response is generated.
-6. The response is synthesized using Azure Speech Service.
-7. The synthesized voice is played back to the user.
-8. The process repeats from step 1.
+```mermaid
+graph TD
+    A[Wait for keyword "小豆"] --> B[Play notification sound and receive voice input]
+    B --> C[Stop recording after user pause and play another notification sound]
+    C --> D[Recognize user's voice using Azure Speech Service]
+    D --> E[Send prompt to OpenAI API and receive response]
+    E --> F[Synthesize response using Azure Speech Service]
+    F --> G[Play synthesized voice to user]
+    G --> A
 ```
 
 ## Development
